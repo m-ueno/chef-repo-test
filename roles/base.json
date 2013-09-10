@@ -7,7 +7,8 @@
     "chef_type":"role",
     "run_list":
         [
-        "recipe[hello]"
+        "recipe[hello]",
+        "recipe[base]"
         ]
 }
 

@@ -1,13 +1,22 @@
 {
     "name":"webserver",
-    "default_attributes":{},
+    "default_attributes":{
+        "apache2":{
+            "listen_ports": [80, 443]
+        },
+        "nginx":{
+            "listen_ports": [8000]
+        }
+    },
     "override_attributes":{},
     "json_class":"Chef::Role",
     "description":"",
     "chef_type":"role",
     "run_list":
         [
-    "recipe[nginx]"
+        "recipe[apache]",
+    "recipe[nginx]",
+    "recipe[mysql]",
+    "recipe[php]"
         ]
 }
-
